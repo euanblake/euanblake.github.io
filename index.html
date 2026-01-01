@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blake Consulting</title>
+  <meta name="description" content="Blake Consulting — practical strategy, delivery, and advisory." />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#121a33;
+      --text:#e9ecf5;
+      --muted:#b8c0dd;
+      --line:rgba(233,236,245,.12);
+      --accent:#7aa2ff;
+      --accent2:#7dffcf;
+      --shadow: 0 12px 40px rgba(0,0,0,.35);
+      --radius:16px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 0%, rgba(122,162,255,.18), transparent 60%),
+        radial-gradient(700px 420px at 85% 10%, rgba(125,255,207,.12), transparent 55%),
+        radial-gradient(900px 700px at 50% 100%, rgba(122,162,255,.10), transparent 60%),
+        var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(12px);
+      background: linear-gradient(to bottom, rgba(11,16,32,.85), rgba(11,16,32,.45));
+      border-bottom: 1px solid var(--line);
+    }
+    .bar{
+      max-width:var(--max); margin:0 auto; padding:14px 24px;
+      display:flex; align-items:center; gap:16px; justify-content:space-between;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; text-decoration:none;
+    }
+    .logo{
+      width:36px; height:36px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 10px 30px rgba(122,162,255,.25);
+    }
+    .brand strong{letter-spacing:.2px}
+    nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .pill{
+      text-decoration:none;
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      transition:transform .12s ease, background .12s ease, color .12s ease, border-color .12s ease;
+      font-size:14px;
+    }
+    .pill:hover{transform:translateY(-1px); color:var(--text); border-color:rgba(233,236,245,.22)}
+    .pill.active{
+      color:var(--text);
+      background: rgba(122,162,255,.12);
+      border-color: rgba(122,162,255,.35);
+    }
+
+    main{padding:22px 0 60px}
+    .hero{
+      margin-top:16px;
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(18,26,51,.75), rgba(18,26,51,.45));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-inner{
+      padding:34px 26px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:center;
+    }
+    @media (max-width: 860px){
+      .hero-inner{grid-template-columns:1fr}
+      nav{justify-content:flex-start}
+    }
+    h1{margin:0 0 8px; font-size:38px; letter-spacing:-.6px}
+    p.lead{margin:0 0 18px; color:var(--muted); font-size:17px}
+    .cta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:14px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      color:var(--text);
+      text-decoration:none;
+      transition:transform .12s ease, border-color .12s ease, background .12s ease;
+      font-weight:600;
+    }
+    .btn:hover{transform:translateY(-1px); border-color:rgba(233,236,245,.22)}
+    .btn.primary{
+      border-color: rgba(122,162,255,.45);
+      background: linear-gradient(135deg, rgba(122,162,255,.22), rgba(125,255,207,.10));
+    }
+    .card-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:16px;
+    }
+    @media (max-width: 900px){ .card-grid{grid-template-columns:1fr} }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(18,26,51,.45);
+      border-radius: var(--radius);
+      padding:16px;
+    }
+    .card h3{margin:0 0 6px; font-size:16px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+
+    .section{
+      margin-top:18px;
+      border:1px solid var(--line);
+      background: rgba(18,26,51,.35);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:22px;
+    }
+    .section h2{margin:0 0 10px; font-size:22px}
+    .section p{margin:0 0 10px; color:var(--muted)}
+    .list{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .list li{margin:6px 0}
+
+    .form{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .form .full{grid-column: 1 / -1}
+    @media (max-width: 700px){ .form{grid-template-columns:1fr} }
+
+    input, textarea{
+      width:100%;
+      padding:11px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background: rgba(11,16,32,.35);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:120px; resize:vertical}
+    .hint{font-size:13px; color:var(--muted); margin-top:10px}
+    footer{
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      padding:20px 0 40px;
+      font-size:13px;
+    }
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      font-size:13px; color:var(--muted);
+      border:1px solid var(--line);
+      padding:6px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.02);
+      margin-bottom:12px;
+    }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2); box-shadow: 0 0 0 6px rgba(125,255,207,.12);}
+    code.inline{background:rgba(255,255,255,.06); padding:2px 6px; border-radius:8px; border:1px solid var(--line)}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="#/">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <strong>Blake Consulting</strong><br/>
+        <span style="color:var(--muted); font-size:12px;">Strategy • Delivery • Advisory</span>
+      </div>
+    </a>
+    <nav id="nav">
+      <a class="pill" href="#/">Home</a>
+      <a class="pill" href="#/about">About</a>
+      <a class="pill" href="#/services">Services</a>
+      <a class="pill" href="#/contact">Contact</a>
+      <a class="pill" href="#/privacy">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <main id="app"></main>
+
+  <footer>
+    <div class="wrap" style="padding:0">
+      <div>© <span id="year"></span> Blake Consulting. All rights reserved.</div>
+      <div style="margin-top:6px;">Hosted on <span class="inline"><code class="inline">GitHub Pages</code></span> • Domain DNS managed via <span class="inline"><code class="inline">Squarespace</code></span></div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // ----- Simple hash router -----
+  const routes = {
+    "/": homePage,
+    "/about": aboutPage,
+    "/services": servicesPage,
+    "/contact": contactPage,
+    "/privacy": privacyPage
+  };
+
+  function setActiveNav(path){
+    document.querySelectorAll("#nav .pill").forEach(a => {
+      const href = a.getAttribute("href") || "";
+      const p = href.replace(/^#/, "") || "/";
+      a.classList.toggle("active", p === ("#" + path) || ("#" + path) === href || (path === "/" && href === "#/"));
+      // Simpler: just check last part
+      a.classList.toggle("active", href === "#"+path);
+    });
+  }
+
+  function getPath(){
+    const hash = location.hash || "#/";
+    const p = hash.replace(/^#/, "");
+    return p.startsWith("/") ? p : "/" + p;
+  }
+
+  function render(){
+    const path = getPath();
+    const view = routes[path] || notFoundPage;
+    document.getElementById("app").innerHTML = view();
+    // Nav highlighting
+    document.querySelectorAll("#nav .pill").forEach(a => a.classList.remove("active"));
+    const active = document.querySelector(`#nav .pill[href="#${path}"]`) || document.querySelector(`#nav .pill[href="#/"]`);
+    if(active) active.classList.add("active");
+
+    // Wire up contact form (demo)
+    const form = document.getElementById("contactForm");
+    if(form){
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const msg = document.getElementById("message").value.trim();
+        const out = document.getElementById("formResult");
+
+        if(!name || !email || !msg){
+          out.textContent = "Please fill in all fields.";
+          return;
+        }
+        out.textContent = "Thanks! This demo form doesn’t send emails yet. To make it send, connect a form service (e.g., Formspree) or add a backend.";
+        form.reset();
+      });
+    }
+  }
+
+  window.addEventListener("hashchange", render);
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function shell(title, subtitle, bodyHtml){
+    return `
+      <div class="hero">
+        <div class="hero-inner">
+          <div>
+            <div class="kicker"><span class="dot" aria-hidden="true"></span><span>${subtitle}</span></div>
+            <h1>${title}</h1>
+            <p class="lead">Practical, calm support to move work forward — with clear deliverables and no fluff.</p>
+            <div class="cta">
+              <a class="btn primary" href="#/contact">Start a conversation</a>
+              <a class="btn" href="#/services">View services</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Quick checklist</h3>
+            <p>To use this site on your domain:</p>
+            <ul class="list">
+              <li>Repo: <code class="inline">euanblake.github.io</code></li>
+              <li>File: <code class="inline">index.html</code> in repo root</li>
+              <li>DNS: <code class="inline">A @</code> + <code class="inline">CNAME www</code> in Squarespace</li>
+              <li>GitHub Pages: set custom domain to <code class="inline">www.blakeconsulting.io</code></li>
+              <li>Enable <code class="inline">Enforce HTTPS</code> after DNS passes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      ${bodyHtml}
+    `;
+  }
+
+  function homePage(){
+    return shell(
+      "Consulting that ships.",
+      "Blake Consulting",
+      `
+      <div class="card-grid">
+        <div class="card">
+          <h3>Strategy</h3>
+          <p>Clarify goals, map options, and choose the simplest path that works.</p>
+        </div>
+        <div class="card">
+          <h3>Delivery</h3>
+          <p>Turn plans into milestones, remove blockers, and land outcomes.</p>
+        </div>
+        <div class="card">
+          <h3>Advisory</h3>
+          <p>Sounding board for decisions, risk, vendors, and execution.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>What we do</h2>
+        <p>We help teams make clear decisions and deliver projects without chaos — especially when priorities are moving fast.</p>
+        <ul class="list">
+          <li>Project / programme support</li>
+          <li>Business analysis and stakeholder alignment</li>
+          <li>Operational improvements and documentation</li>
+          <li>Technical coordination (non-code and code-friendly)</li>
+        </ul>
+      </div>
+      `
+    );
+  }
+
+  function aboutPage(){
+    return `
+      <div class="section">
+        <h2>About</h2>
+        <p>Blake Consulting focuses on straightforward problem-solving: define the problem, pick the best option, and execute with tight feedback loops.</p>
+        <p>If you want, tell me your niche (tech, ops, finance, construction, etc.) and I can rewrite this section to match your real offer.</p>
+        <ul class="list">
+          <li>Clear plans and clear next steps</li>
+          <li>Lightweight documentation</li>
+          <li>Professional communication and delivery</li>
+        </ul>
+      </div>
+    `;
+  }
+
+  function servicesPage(){
+    return `
+      <div class="section">
+        <h2>Services</h2>
+        <p>Pick one starting point — we can scale up or down depending on what you need.</p>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Discovery Sprint</h3>
+            <p>1–2 weeks to map the problem, identify constraints, and propose a plan.</p>
+          </div>
+          <div class="card">
+            <h3>Delivery Support</h3>
+            <p>Weekly cadence, milestones, stakeholder management, and risk tracking.</p>
+          </div>
+          <div class="card">
+            <h3>Advisory Sessions</h3>
+            <p>Quick decision help: options, tradeoffs, and what to do next.</p>
+          </div>
+        </div>
+        <p class="hint">Tip: You can edit the text in this file anytime and just push a commit — GitHub Pages will update automatically.</p>
+      </div>
+    `;
+  }
+
+  function contactPage(){
+    return `
+      <div class="section">
+        <h2>Contact</h2>
+        <p>Use the form below as a placeholder. To make it send emails, connect a form service (Formspree / Getform / Netlify Forms) or build a small backend.</p>
+
+        <form id="contactForm" class="form">
+          <div>
+            <label for="name" class="hint">Name</label>
+            <input id="name" name="name" autocomplete="name" required />
+          </div>
+          <div>
+            <label for="email" class="hint">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="full">
+            <label for="message" class="hint">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="full">
+            <button class="btn primary" type="submit">Send</button>
+            <span id="formResult" class="hint" style="margin-left:10px;"></span>
+          </div>
+        </form>
+      </div>
+    `;
+  }
+
+  function privacyPage(){
+    return `
+      <div class="section">
+        <h2>Privacy</h2>
+        <p>This is a starter privacy page. Replace it with your real policy for your business and jurisdiction.</p>
+        <ul class="list">
+          <li>We only use information you choose to provide (e.g., via contact).</li>
+          <li>We don’t sell personal data.</li>
+          <li>If you add analytics/cookies, disclose it here.</li>
+        </ul>
+      </div>
+    `;
+  }
+
+  function notFoundPage(){
+    return `
+      <div class="section">
+        <h2>Page not found</h2>
+        <p>The page you’re looking for doesn’t exist. Go <a href="#/">home</a>.</p>
+      </div>
+    `;
+  }
+
+  render();
+</script>
+</body>
+</html>
