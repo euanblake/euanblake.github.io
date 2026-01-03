@@ -38,7 +38,8 @@
     "url":"https://YOUR-DOMAIN-HERE/",
     "image":"https://YOUR-DOMAIN-HERE/images/euan-blake.jpg",
     "areaServed":["EMEA","APAC"],
-    "email":"mailto:euan@blakeconsultancy.io"
+    "email":"mailto:euan@blakeconsultancy.io",
+    "sameAs":["https://www.linkedin.com/in/euan-blake/"]
   }
   </script>
 
@@ -530,54 +531,6 @@
       flex-wrap: wrap;
       margin: 0.8rem 0 1.2rem;
     }
-    .contact-form {
-      background: #F9F7F2;
-      border-radius: 0.9rem;
-      border: 1px solid #E1DBD0;
-      padding: 1.8rem 1.6rem;
-      display: grid;
-      gap: 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-    .form-row { display: flex; flex-direction: column; gap: 0.35rem; }
-    label { font-size: 0.9rem; color: #5A5448; }
-    input[type="text"],
-    input[type="email"],
-    textarea,
-    select {
-      font-family: inherit;
-      font-size: 0.95rem;
-      padding: 0.55rem 0.6rem;
-      border-radius: 0.55rem;
-      border: 1px solid #D5D0C5;
-      background: #FDFBF6;
-    }
-    textarea { min-height: 120px; resize: vertical; }
-    .phone-row {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 0.4rem;
-    }
-    .checkbox-row {
-      display: flex;
-      gap: 0.5rem;
-      align-items: flex-start;
-      font-size: 0.85rem;
-      color: #5A5448;
-      margin-top: 0.4rem;
-    }
-    .checkbox-row input[type="checkbox"] { margin-top: 0.2rem; }
-    .form-actions {
-      margin-top: 0.8rem;
-      display: flex;
-      justify-content: flex-end;
-    }
 
     /* ---------- Presentation Mode ---------- */
     body.presentation header { padding: 2.2rem 6vw 1rem; }
@@ -635,8 +588,6 @@
       main { padding: 0 7vw 3rem; }
       .hero { grid-template-columns: 1fr; }
       .portrait img { height: 320px; }
-      .form-grid { grid-template-columns: minmax(0, 1fr); }
-      .phone-row { grid-template-columns: minmax(0, 1fr); }
     }
 
     /* Arabic RTL helper */
@@ -1074,92 +1025,21 @@
     <section id="contact" class="tab-section">
       <div class="contact-intro">
         <h2 data-i18n="contactTitle">Contact</h2>
-        <p data-i18n="contactIntro">For consultancy engagements, project discussions or speaking opportunities, please complete the form below.</p>
+        <p data-i18n="contactIntro">For consultancy engagements, project discussions or speaking opportunities, please get in touch via email or LinkedIn.</p>
 
         <div class="contact-actions">
           <button class="btn" type="button" id="downloadOverview" data-i18n="downloadBtn">Overview (Download)</button>
-          <a class="btn" href="mailto:euan@blakeconsultancy.io" data-i18n="emailBtn">Email</a>
+          <a class="btn primary" href="mailto:euan@blakeconsultancy.io" data-i18n="emailBtn" aria-label="Email euan@blakeconsultancy.io">Email</a>
+          <a class="btn"
+             href="https://www.linkedin.com/in/euan-blake/"
+             target="_blank"
+             rel="noopener"
+             data-i18n="linkedinBtn"
+             aria-label="Open LinkedIn profile (new tab)">
+            LinkedIn
+          </a>
         </div>
       </div>
-
-      <form
-        class="contact-form"
-        action="mailto:euan@blakeconsultancy.io"
-        method="POST"
-        enctype="text/plain"
-      >
-        <div class="form-grid">
-          <div class="form-row">
-            <label for="first-name" data-i18n="firstName">First name</label>
-            <input type="text" id="first-name" name="First name" required />
-          </div>
-
-          <div class="form-row">
-            <label for="surname" data-i18n="surname">Surname</label>
-            <input type="text" id="surname" name="Surname" required />
-          </div>
-
-          <div class="form-row">
-            <label for="email" data-i18n="emailLabel">Email</label>
-            <input type="email" id="email" name="Email" required />
-          </div>
-
-          <div class="form-row">
-            <label for="phone" data-i18n="phoneLabel">Phone</label>
-            <div class="phone-row">
-              <select id="country-code" name="Country code" required>
-                <option value="+44">UK (+44)</option>
-                <option value="+1">USA / Canada (+1)</option>
-                <option value="+61">Australia (+61)</option>
-                <option value="+971">UAE (+971)</option>
-                <option value="+91">India (+91)</option>
-                <option value="+94">Sri Lanka (+94)</option>
-                <option value="+960">Maldives (+960)</option>
-                <option value="+65">Singapore (+65)</option>
-                <option value="+66">Thailand (+66)</option>
-                <option value="+353">Ireland (+353)</option>
-                <option value="+33">France (+33)</option>
-                <option value="+49">Germany (+49)</option>
-                <option value="+39">Italy (+39)</option>
-                <option value="+34">Spain (+34)</option>
-                <option value="+852">Hong Kong (+852)</option>
-                <option value="+81">Japan (+81)</option>
-                <option value="+86">China (+86)</option>
-                <option value="+64">New Zealand (+64)</option>
-                <option value="other">Other</option>
-              </select>
-              <input
-                type="text"
-                id="phone"
-                name="Phone number"
-                placeholder="Phone number"
-                required
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <label for="message" data-i18n="messageLabel">Message</label>
-          <textarea id="message" name="Message" required></textarea>
-        </div>
-
-        <div class="checkbox-row">
-          <input
-            type="checkbox"
-            id="consent"
-            name="Consent to further information"
-            value="Yes"
-          />
-          <label for="consent" data-i18n="consentText">
-            I agree to receive further information and updates from Euan Blake.
-          </label>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="btn primary" data-i18n="sendBtn">Send enquiry</button>
-        </div>
-      </form>
 
       <div style="text-align:center; margin-top:1.3rem;">
         <a class="btn" href="#top" data-i18n="backToTopInline">Back to top</a>
@@ -1692,16 +1572,10 @@
         smCommunity: "Community",
 
         contactTitle: "Contact",
-        contactIntro: "For consultancy engagements, project discussions or speaking opportunities, please complete the form below.",
+        contactIntro: "For consultancy engagements, project discussions or speaking opportunities, please get in touch via email or LinkedIn.",
         downloadBtn: "Overview (Download)",
         emailBtn: "Email",
-        firstName: "First name",
-        surname: "Surname",
-        emailLabel: "Email",
-        phoneLabel: "Phone",
-        messageLabel: "Message",
-        consentText: "I agree to receive further information and updates from Euan Blake.",
-        sendBtn: "Send enquiry",
+        linkedinBtn: "LinkedIn",
         backToTopInline: "Back to top",
 
         footerTop: "Back to top",
@@ -1741,8 +1615,10 @@
         psMarinas: "Премиальные марины",
         skillsIntro: "Междисциплинарный опыт по клиентам и маркетинговым коммуникациям.",
         contactTitle: "Контакт",
+        contactIntro: "По вопросам сотрудничества, проектов или выступлений свяжитесь по email или через LinkedIn.",
         downloadBtn: "Профиль (скачать)",
         emailBtn: "Email",
+        linkedinBtn: "LinkedIn",
         backToTopInline: "Наверх",
         footerTop: "Наверх",
         footerPrivacy: "Конфиденциальность и защита данных",
@@ -1775,8 +1651,10 @@
         psMarinas: "Marine premium",
         skillsIntro: "Esperienza multidisciplinare tra clienti e Marketing Communications.",
         contactTitle: "Contatti",
+        contactIntro: "Per incarichi di consulenza, progetti o interventi, contattami via email o su LinkedIn.",
         downloadBtn: "Profilo (Download)",
         emailBtn: "Email",
+        linkedinBtn: "LinkedIn",
         backToTopInline: "Torna su",
         footerTop: "Torna su",
         footerPrivacy: "Privacy & Protezione dati",
@@ -1809,8 +1687,10 @@
         psMarinas: "Premium-Marinas",
         skillsIntro: "Interdisziplinäre Erfahrung über Kunden und Marketing Communications.",
         contactTitle: "Kontakt",
+        contactIntro: "Für Beratungsmandate, Projektgespräche oder Speaking-Anfragen kontaktieren Sie mich bitte per E-Mail oder über LinkedIn.",
         downloadBtn: "Profil (Download)",
         emailBtn: "Email",
+        linkedinBtn: "LinkedIn",
         backToTopInline: "Nach oben",
         footerTop: "Nach oben",
         footerPrivacy: "Datenschutz",
@@ -1843,8 +1723,10 @@
         psMarinas: "مرافئ فاخرة",
         skillsIntro: "خبرة متعددة التخصصات عبر العملاء واتصالات التسويق.",
         contactTitle: "التواصل",
+        contactIntro: "لأعمال الاستشارات أو مناقشة المشاريع أو فرص التحدث، يُرجى التواصل عبر البريد الإلكتروني أو LinkedIn.",
         downloadBtn: "الملف (تنزيل)",
         emailBtn: "البريد",
+        linkedinBtn: "LinkedIn",
         backToTopInline: "العودة للأعلى",
         footerTop: "العودة للأعلى",
         footerPrivacy: "الخصوصية وحماية البيانات",
