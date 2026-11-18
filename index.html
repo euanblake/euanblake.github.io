@@ -183,9 +183,12 @@
 
     .portrait-wrap {
       display: grid;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto auto;
+      align-content: start;
+      align-self: start;
+      position: sticky;
+      top: 5.5rem;
       gap: 0.8rem;
-      height: 100%;
     }
     .portrait {
       border-radius: 1rem;
@@ -207,9 +210,7 @@
       overflow: hidden;
       background: #F9F7F2;
       position: relative;
-      min-height: 260px;
-      display: grid;
-      place-items: center;
+      aspect-ratio: 4 / 3;
     }
     .slide-bg {
       position: absolute;
@@ -221,27 +222,29 @@
       background-size: cover;
     }
     .slide-img {
-      position: relative;
-      width: 92%;
-      height: 220px;
-      display: grid;
-      place-items: center;
+      position: absolute;
+      inset: 0;
     }
     .slide-img img {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      object-fit: contain; /* key: no stretch */
-      image-rendering: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* fill the frame, centred crop */
+      object-position: center;
+      transition: opacity 0.4s ease;
     }
     .slide-caption {
-      position: relative;
-      margin-top: 0.2rem;
-      padding: 0 0.9rem 0.9rem;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      padding: 2.4rem 0.9rem 1.6rem;
       text-align: center;
-      font-size: 0.85rem;
-      color: #6F6A5F;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      color: #fff;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+      text-shadow: 0 1px 2px rgba(0,0,0,0.35);
     }
     .slide-dots {
       position: absolute;
@@ -257,9 +260,9 @@
       width: 6px;
       height: 6px;
       border-radius: 999px;
-      background: rgba(17,17,17,0.22);
+      background: rgba(255,255,255,0.5);
     }
-    .dot.active { background: rgba(17,17,17,0.85); }
+    .dot.active { background: #fff; }
 
     .grid-2 {
       display: grid;
@@ -538,7 +541,6 @@
     body.presentation .tab-menu { position: static; backdrop-filter: none; }
     body.presentation .hero { grid-template-columns: 1.2fr 0.8fr; }
     body.presentation .hero-card { padding: 1.4rem 1.6rem; }
-    body.presentation .slide-img { height: 260px; }
     body.presentation .portrait img { height: 420px; }
     body.presentation .portfolio-card { grid-template-rows: 210px auto; }
     body.presentation .portfolio-card img { height: 210px; }
@@ -588,6 +590,8 @@
       main { padding: 0 7vw 3rem; }
       .hero { grid-template-columns: 1fr; }
       .portrait img { height: 320px; }
+      .portrait-wrap { position: static; }
+      .grid-2 { grid-template-columns: 1fr; gap: 1.2rem; }
     }
 
     /* Arabic RTL helper */
@@ -1111,22 +1115,22 @@
           { src: "images/JA Manafaru, Maldives.jpg", caption: "JA Manafaru, Maldives" },
           { src: "images/COMO Cocoa Island, Maldives.jpg", caption: "COMO Cocoa Island, Maldives" },
           { src: "images/COMO Maalifushi, Maldives.jpg", caption: "COMO Maalifushi, Maldives" },
-          { src: "images/W Hotel, London.jpg", caption: "W Hotel, London" },
+          { src: "images/W Hotel, London.jpg", caption: "W Hotel London, UK" },
           { src: "images/Novotel Hua Hin, Thailand.jpg", caption: "Novotel Hua Hin, Thailand" },
           { src: "images/Novotel Surin, Phuket.jpg", caption: "Novotel Surin, Phuket" },
           { src: "images/Novotel Karon, Phuket.jpg", caption: "Novotel Karon, Phuket" },
           { src: "images/Swissotel Kamala, Phuket.jpg", caption: "Swissotel Kamala, Phuket" },
           { src: "images/Swissotel Patong, Phuket.jpg", caption: "Swissotel Patong, Phuket" },
           { src: "images/The Stones, Bali.jpg", caption: "The Stones, Bali" },
-          { src: "images/OBLU SELECT Lobigili.jpeg", caption: "OBLU SELECT Lobigili" },
-          { src: "images/OBLU Select Sangeli.jpeg", caption: "OBLU Select Sangeli" },
+          { src: "images/OBLU SELECT Lobigili.jpeg", caption: "OBLU SELECT Lobigili, Maldives" },
+          { src: "images/OBLU Select Sangeli.jpeg", caption: "OBLU SELECT Sangeli, Maldives" },
           { src: "images/OBLU Nature Helengeli, Maldives.jpeg", caption: "OBLU Nature Helengeli, Maldives" },
-          { src: "images/OBLU Xperience, Maldives.jpeg", caption: "OBLU Xperience, Maldives" },
+          { src: "images/OBLU Xperience, Maldives.jpeg", caption: "OBLU Xperience Ailafushi, Maldives" },
           { src: "images/Atmosphere Kanifushi, Maldives.jpeg", caption: "Atmosphere Kanifushi, Maldives" },
-          { src: "images/VARU by Atmosphere.jpeg", caption: "VARU by Atmosphere" },
-          { src: "images/RAAYA By Atmosphere, Maldives.jpeg", caption: "RAAYA By Atmosphere, Maldives" },
-          { src: "images/OZEN Maadhoo, Maldives.jpeg", caption: "OZEN Maadhoo, Maldives" },
-          { src: "images/OZEN Bolifushi, Maldives.jpeg", caption: "OZEN Bolifushi, Maldives" }
+          { src: "images/VARU by Atmosphere.jpeg", caption: "VARU by Atmosphere, Maldives" },
+          { src: "images/RAAYA By Atmosphere, Maldives.jpeg", caption: "RAAYA by Atmosphere, Maldives" },
+          { src: "images/OZEN Maadhoo, Maldives.jpeg", caption: "OZEN Life Maadhoo, Maldives" },
+          { src: "images/OZEN Bolifushi, Maldives.jpeg", caption: "OZEN Reserve Bolifushi, Maldives" }
         ]
       },
 
@@ -1135,27 +1139,27 @@
         blurb: "Retail destinations, leisure assets and flagship mixed-use placemaking.",
         items: [
           { src: "images/Westfield_London.jpeg", caption: "Westfield London" },
-          { src: "images/Ethos_Warsaw.jpeg", caption: "Ethos, Warsaw" },
-          { src: "images/Galleria_Krakow.jpeg", caption: "Galleria, Krakow" },
-          { src: "images/Trinity_Leeds.jpeg", caption: "Trinity, Leeds" },
-          { src: "images/Whitefriars_Canterbury.jpeg", caption: "Whitefriars, Canterbury" },
-          { src: "images/Centre_MK_UK.jpg", caption: "Centre MK" },
-          { src: "images/MetQuarter_Liverpool.jpeg", caption: "MetQuarter, Liverpool" },
-          { src: "images/Buchanan_Galleries_UK.jpeg", caption: "Buchanan Galleries" },
-          { src: "images/Royal_Victoria_Place_UK.jpeg", caption: "Royal Victoria Place" },
-          { src: "images/County_Square_Ashford.jpeg", caption: "County Square, Ashford" },
-          { src: "images/Haymarket _Leicester.jpeg", caption: "Haymarket, Leicester" },
-          { src: "images/Rivergate_Irvine.jpeg", caption: "Rivergate, Irvine" },
-          { src: "images/Swangate_Wellingborough.jpeg", caption: "Swangate, Wellingborough" },
-          { src: "images/The_Strand_Bottle.jpeg", caption: "The Strand (bottle activation)" },
-          { src: "images/Spindles_Oldham.jpeg", caption: "Spindles, Oldham" },
-          { src: "images/Rochdale_Centre.jpeg", caption: "Rochdale Centre" },
+          { src: "images/Ethos_Warsaw.jpeg", caption: "Ethos Warsaw, Poland" },
+          { src: "images/Galleria_Krakow.jpeg", caption: "Galleria Krakow, Poland" },
+          { src: "images/Trinity_Leeds.jpeg", caption: "Trinity Leeds, UK" },
+          { src: "images/Whitefriars_Canterbury.jpeg", caption: "Whitefriars Canterbury, UK" },
+          { src: "images/Centre_MK_UK.jpg", caption: "Centre MK, UK" },
+          { src: "images/MetQuarter_Liverpool.jpeg", caption: "MetQuarter Liverpool, UK" },
+          { src: "images/Buchanan_Galleries_UK.jpeg", caption: "Buchanan Galleries Glasgow, UK" },
+          { src: "images/Royal_Victoria_Place_UK.jpeg", caption: "Royal Victoria Place Tunbridge, UK" },
+          { src: "images/County_Square_Ashford.jpeg", caption: "County Square Ashford, UK" },
+          { src: "images/Haymarket _Leicester.jpeg", caption: "Haymarket Leicester, UK" },
+          { src: "images/Rivergate_Irvine.jpeg", caption: "Rivergate Irvine, UK" },
+          { src: "images/Swangate_Wellingborough.jpeg", caption: "Swangate Wellingborough, UK" },
+          { src: "images/The_Strand_Bottle.jpeg", caption: "The Strand Bootle, UK" },
+          { src: "images/Spindles_Oldham.jpeg", caption: "Spindles Oldham, UK" },
+          { src: "images/Rochdale_Centre.jpeg", caption: "Rochdale Centre, UK" },
 
           /* These remain in Retail & Leisure (NOT Residential & Commercial), per your instruction */
           { src: "images/The_Belfry_UK.jpeg", caption: "The Belfry, UK" },
           { src: "images/Formby_Hall_UK.jpeg", caption: "Formby Hall, UK" },
           { src: "images/Hurlston_Hall_UK.jpeg", caption: "Hurlston Hall, UK" },
-          { src: "images/The_Grange_Golf_Club_AU.jpeg", caption: "The Grange Golf Club, AU" },
+          { src: "images/The_Grange_Golf_Club_AU.jpeg", caption: "The Grange, Australia" },
           { src: "images/Glenmorangie_House_UK.jpeg", caption: "Glenmorangie House, UK" }
         ]
       },
@@ -1170,15 +1174,15 @@
           { src: "images/Pokrovsky_Hills_Moscow.jpeg", caption: "Pokrovsky Hills, Moscow" },
           { src: "images/Diamandio_Lake_City_Senegal.jpeg", caption: "Diamandio Lake City, Senegal" },
           { src: "images/One_Blackfriars_London.jpeg", caption: "One Blackfriars, London" },
-          { src: "images/Park_House_Mayfair.jpeg", caption: "Park House, Mayfair" },
+          { src: "images/Park_House_Mayfair.jpeg", caption: "Park House Mayfair, London" },
           { src: "images/Shoreditch_Village_London.jpeg", caption: "Shoreditch Village, London" },
           { src: "images/The_Hop_Exchange_London.jpeg", caption: "The Hop Exchange, London" },
           { src: "images/Houghton_Regis_UK.jpeg", caption: "Houghton Regis, UK" },
-          { src: "images/Hallsvile_Quarter.jpeg", caption: "Hallsville Quarter" },
+          { src: "images/Hallsvile_Quarter.jpeg", caption: "Hallsville Quarter, UK" },
           { src: "images/Addlestone_Town_Centre.jpeg", caption: "Addlestone Town Centre, UK" },
-          { src: "images/Wimpey_Homes_Kilmarnock_UK.jpeg", caption: "Wimpey Homes, Kilmarnock" },
-          { src: "images/Wimpey_Homes_S_Queensferry_UK.jpeg", caption: "Wimpey Homes, South Queensferry" },
-          { src: "images/Bomber_Command_Memorial_UK.jpeg", caption: "Bomber Command Memorial, UK" }
+          { src: "images/Wimpey_Homes_Kilmarnock_UK.jpeg", caption: "Wimpey Homes Kilmarnock, UK" },
+          { src: "images/Wimpey_Homes_S_Queensferry_UK.jpeg", caption: "Wimpey Homes South Queensferry, UK" },
+          { src: "images/Bomber_Command_Memorial_UK.jpeg", caption: "Bomber Command Memorial London, UK" }
         ]
       },
 
@@ -1187,26 +1191,23 @@
         blurb: "Premium marina portfolio (sequence fixed as requested).",
         items: [
           /* FIXED filenames to avoid broken links */
-          { src: "images/D_Marin_Dubai_Harbour.jpeg", caption: "Dubai Harbour" },
-          { src: "images/D_Marin_Al_Seef.webp", caption: "Al Seef" },
-          { src: "images/D_Marin_Al_Jaddaf.webp", caption: "Al Jaddaf" },
-          { src: "images/D_Marin_Turgutreis.webp", caption: "Turgutreis" },
-          { src: "images/D_Marin_Gocek.webp", caption: "Gocek" },
-          { src: "images/D_Marin_Didim.webp", caption: "Didim" },
-          { src: "images/D_Marin_Gouvia.webp", caption: "Gouvia" },
-          { src: "images/D_Marin_Zea.webp", caption: "Zea" },
-          { src: "images/D_Marin_Lefkas.webp", caption: "Lefkas" },
+          { src: "images/D_Marin_Dubai_Harbour.jpeg", caption: "Dubai Harbour, Dubai" },
+          { src: "images/D_Marin_Al_Seef.webp", caption: "Al Seef, Dubai" },
+          { src: "images/D_Marin_Al_Jaddaf.webp", caption: "Al Jaddaf, Dubai" },
+          { src: "images/D_Marin_Turgutreis.webp", caption: "Turgutreis, Turkey" },
+          { src: "images/D_Marin_Gocek.webp", caption: "Gocek, Turkey" },
+          { src: "images/D_Marin_Didim.webp", caption: "Didim, Turkey" },
+          { src: "images/D_Marin_Gouvia.webp", caption: "Gouvia, Corfu" },
+          { src: "images/D_Marin_Zea.webp", caption: "Zea Athens, Greece" },
+          { src: "images/D_Marin_Lefkas.webp", caption: "Lefkas, Greece" },
 
-          /* You requested Didim again in the sequence */
-          { src: "images/D_Marin_Didim.webp", caption: "Didim" },
-
-          { src: "images/D_Marin_Mandalina.webp", caption: "Mandalina" },
-          { src: "images/D_Marin_Tribunj.webp", caption: "Tribunj" },
-          { src: "images/D_Marin_Dalmacija.webp", caption: "Dalmacija" },
-          { src: "images/D_Marin_Borik.webp", caption: "Borik" },
+          { src: "images/D_Marin_Mandalina.webp", caption: "Mandalina, Croatia" },
+          { src: "images/D_Marin_Tribunj.webp", caption: "Tribunj, Croatia" },
+          { src: "images/D_Marin_Dalmacija.webp", caption: "Dalmacija, Croatia" },
+          { src: "images/D_Marin_Borik.webp", caption: "Borik, Croatia" },
 
           /* Portonovi was mentioned as broken earlier; included as an extra final tile */
-          { src: "images/D_Marin_Portonovi.jpeg", caption: "Portonovi" }
+          { src: "images/D_Marin_Portonovi.jpeg", caption: "Portonovi, Montenegro" }
         ]
       }
     };
