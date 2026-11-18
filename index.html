@@ -468,6 +468,10 @@
       object-position: center;
       background: #F5F3EE;
     }
+    .portfolio-card figcaption a.map-link{ color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; display: inline-flex; align-items: baseline; gap: 0.3em; }
+    .portfolio-card figcaption a.map-link:hover{ border-bottom-style: solid; }
+    .portfolio-card figcaption a.map-link svg{ width: 0.7em; height: 0.95em; flex: 0 0 auto; opacity: 0.75; position: relative; top: 0.1em; }
+    .portfolio-card figcaption .pre-open{ font-size: 0.85em; opacity: 0.8; white-space: nowrap; }
     .portfolio-card figcaption{
       padding: 0.7rem 0.85rem 0.85rem;
       font-size: 0.85rem;
@@ -951,7 +955,7 @@
             <tr>
               <td>Agency Consultant</td>
               <td>Semer Holdings</td>
-              <td>Senegal Diamandio Lake City</td>
+              <td>Senegal Diamniadio Lake City</td>
               <td>Mixed Use</td>
               <td class="center"></td><td class="center"></td><td class="center dotmark">⦿</td><td class="center"></td><td class="center"></td><td class="center"></td><td class="center dotmark">⦿</td><td class="center"></td><td class="center"></td><td class="center"></td>
             </tr>
@@ -1157,12 +1161,12 @@
           { src: "images/JA Hatta Fort, UAE.jpg", caption: "JA Hatta Fort, UAE" },
           { src: "images/JA Ocean View, Dubai.jpg", caption: "JA Ocean View, Dubai" },
           { src: "images/JA The Resort, Dubai.jpg", caption: "JA The Resort, Dubai" },
-          { src: "images/JA Waterfront, Seychelles.jpg", caption: "JA Waterfront, Seychelles" },
+          { src: "images/JA Waterfront, Seychelles.jpg", caption: "JA Waterfront, Seychelles", note: "pre-opening" },
           { src: "images/JA Enchanted Island, Seychelles.jpg", caption: "JA Enchanted Island, Seychelles" },
           { src: "images/JA Manafaru, Maldives.jpg", caption: "JA Manafaru, Maldives" },
           { src: "images/COMO Cocoa Island, Maldives.jpg", caption: "COMO Cocoa Island, Maldives" },
           { src: "images/COMO Maalifushi, Maldives.jpg", caption: "COMO Maalifushi, Maldives" },
-          { src: "images/W Hotel, London.jpg", caption: "W Hotel London, UK" },
+          { src: "images/W Hotel, London.jpg", caption: "W Hotel London, UK", note: "pre-opening" },
           { src: "images/Novotel Hua Hin, Thailand.jpg", caption: "Novotel Hua Hin, Thailand" },
           { src: "images/Novotel Surin, Phuket.jpg", caption: "Novotel Surin, Phuket" },
           { src: "images/Novotel Karon, Phuket.jpg", caption: "Novotel Karon, Phuket" },
@@ -1175,7 +1179,7 @@
           { src: "images/OBLU Xperience, Maldives.jpeg", caption: "OBLU Xperience Ailafushi, Maldives" },
           { src: "images/Atmosphere Kanifushi, Maldives.jpeg", caption: "Atmosphere Kanifushi, Maldives" },
           { src: "images/VARU by Atmosphere.jpeg", caption: "VARU by Atmosphere, Maldives" },
-          { src: "images/RAAYA By Atmosphere, Maldives.jpeg", caption: "RAAYA by Atmosphere, Maldives" },
+          { src: "images/RAAYA By Atmosphere, Maldives.jpeg", caption: "RAAYA by Atmosphere, Maldives", note: "pre-opening" },
           { src: "images/OZEN Maadhoo, Maldives.jpeg", caption: "OZEN Life Maadhoo, Maldives" },
           { src: "images/OZEN Bolifushi, Maldives.jpeg", caption: "OZEN Reserve Bolifushi, Maldives" }
         ]
@@ -1185,20 +1189,20 @@
         title: "Retail & Leisure",
         blurb: "Retail destinations, leisure assets and flagship mixed-use placemaking.",
         items: [
-          { src: "images/Westfield_London.jpeg", caption: "Westfield London" },
-          { src: "images/Ethos_Warsaw.jpeg", caption: "Ethos Warsaw, Poland" },
-          { src: "images/Galleria_Krakow.jpeg", caption: "Galleria Krakow, Poland" },
-          { src: "images/Trinity_Leeds.jpeg", caption: "Trinity Leeds, UK" },
+          { src: "images/Westfield_London.jpeg", caption: "Westfield Stratford City, East London", note: "pre-opening", q: "Westfield Stratford City, London" },
+          { src: "images/Ethos_Warsaw.jpeg", caption: "Ethos Warsaw, Poland", note: "pre-opening" },
+          { src: "images/Galleria_Krakow.jpeg", caption: "Galleria Krakow, Poland", note: "pre-opening" },
+          { src: "images/Trinity_Leeds.jpeg", caption: "Trinity Leeds, UK", note: "pre-opening" },
           { src: "images/Whitefriars_Canterbury.jpeg", caption: "Whitefriars Canterbury, UK" },
           { src: "images/Centre_MK_UK.jpg", caption: "Centre MK, UK" },
-          { src: "images/MetQuarter_Liverpool.jpeg", caption: "MetQuarter Liverpool, UK" },
+          { src: "images/MetQuarter_Liverpool.jpeg", caption: "MetQuarter Liverpool, UK", note: "pre-opening" },
           { src: "images/Buchanan_Galleries_UK.jpeg", caption: "Buchanan Galleries Glasgow, UK" },
-          { src: "images/Royal_Victoria_Place_UK.jpeg", caption: "Royal Victoria Place Tunbridge, UK" },
+          { src: "images/Royal_Victoria_Place_UK.jpeg", caption: "Royal Victoria Place Tunbridge, UK", q: "Royal Victoria Place, Tunbridge Wells" },
           { src: "images/County_Square_Ashford.jpeg", caption: "County Square Ashford, UK" },
           { src: "images/Haymarket _Leicester.jpeg", caption: "Haymarket Leicester, UK" },
           { src: "images/Rivergate_Irvine.jpeg", caption: "Rivergate Irvine, UK" },
           { src: "images/Swangate_Wellingborough.jpeg", caption: "Swangate Wellingborough, UK" },
-          { src: "images/The_Strand_Bottle.jpeg", caption: "The Strand Bootle, UK" },
+          { src: "images/The_Strand_Bottle.jpeg", caption: "The Strand Bootle, UK", q: "The Strand Shopping Centre, Bootle" },
           { src: "images/Spindles_Oldham.jpeg", caption: "Spindles Oldham, UK" },
           { src: "images/Rochdale_Centre.jpeg", caption: "Rochdale Centre, UK" },
 
@@ -1206,7 +1210,7 @@
           { src: "images/The_Belfry_UK.jpeg", caption: "The Belfry, UK" },
           { src: "images/Formby_Hall_UK.jpeg", caption: "Formby Hall, UK" },
           { src: "images/Hurlston_Hall_UK.jpeg", caption: "Hurlston Hall, UK" },
-          { src: "images/The_Grange_Golf_Club_AU.jpeg", caption: "The Grange, Australia" },
+          { src: "images/The_Grange_Golf_Club_AU.jpeg", caption: "The Grange Golf Club, Wollongong NSW", q: "The Grange Golf Club, Wollongong NSW, Australia" },
           { src: "images/Glenmorangie_House_UK.jpeg", caption: "Glenmorangie House, UK" }
         ]
       },
@@ -1215,21 +1219,21 @@
         title: "Residential & Commercial",
         blurb: "Residential communities, commercial landmarks and regeneration programmes.",
         items: [
-          { src: "images/The_Orchards_Sydney.jpeg", caption: "The Orchards, Sydney" },
-          { src: "images/Wentworth_Point_Sydney.jpeg", caption: "Wentworth Point, Sydney" },
-          { src: "images/Gledswoos_Sydney.jpeg", caption: "Gledswood, Sydney" },
-          { src: "images/Pokrovsky_Hills_Moscow.jpeg", caption: "Pokrovsky Hills, Moscow" },
-          { src: "images/Diamandio_Lake_City_Senegal.jpeg", caption: "Diamandio Lake City, Senegal" },
-          { src: "images/One_Blackfriars_London.jpeg", caption: "One Blackfriars, London" },
-          { src: "images/Park_House_Mayfair.jpeg", caption: "Park House Mayfair, London" },
-          { src: "images/Shoreditch_Village_London.jpeg", caption: "Shoreditch Village, London" },
-          { src: "images/The_Hop_Exchange_London.jpeg", caption: "The Hop Exchange, London" },
-          { src: "images/Houghton_Regis_UK.jpeg", caption: "Houghton Regis, UK" },
-          { src: "images/Hallsvile_Quarter.jpeg", caption: "Hallsville Quarter, UK" },
-          { src: "images/Addlestone_Town_Centre.jpeg", caption: "Addlestone Town Centre, UK" },
-          { src: "images/Wimpey_Homes_Kilmarnock_UK.jpeg", caption: "Wimpey Homes Kilmarnock, UK" },
-          { src: "images/Wimpey_Homes_S_Queensferry_UK.jpeg", caption: "Wimpey Homes South Queensferry, UK" },
-          { src: "images/Bomber_Command_Memorial_UK.jpeg", caption: "Bomber Command Memorial London, UK" }
+          { src: "images/The_Orchards_Sydney.jpeg", caption: "The Orchards, Sydney", note: "pre-opening" },
+          { src: "images/Wentworth_Point_Sydney.jpeg", caption: "Wentworth Point, Sydney", note: "pre-opening" },
+          { src: "images/Gledswoos_Sydney.jpeg", caption: "Gledswood, Sydney", note: "pre-opening" },
+          { src: "images/Pokrovsky_Hills_Moscow.jpeg", caption: "Pokrovsky Hills, Moscow", note: "pre-opening" },
+          { src: "images/Diamandio_Lake_City_Senegal.jpeg", caption: "Diamniadio Lake City, Senegal", note: "pre-opening" },
+          { src: "images/One_Blackfriars_London.jpeg", caption: "One Blackfriars, London", note: "pre-opening" },
+          { src: "images/Park_House_Mayfair.jpeg", caption: "Park House Mayfair, London", note: "pre-opening" },
+          { src: "images/Shoreditch_Village_London.jpeg", caption: "Shoreditch Village, London", note: "pre-opening" },
+          { src: "images/The_Hop_Exchange_London.jpeg", caption: "The Hop Exchange, London", note: "pre-opening" },
+          { src: "images/Houghton_Regis_UK.jpeg", caption: "Houghton Regis, UK", note: "pre-opening", q: "Houghton Regis, Bedfordshire" },
+          { src: "images/Hallsvile_Quarter.jpeg", caption: "Hallsville Quarter, UK", note: "pre-opening" },
+          { src: "images/Addlestone_Town_Centre.jpeg", caption: "Addlestone Town Centre, UK", note: "pre-opening" },
+          { src: "images/Wimpey_Homes_Kilmarnock_UK.jpeg", caption: "Wimpey Homes Kilmarnock, UK", note: "pre-opening", q: "Kilmarnock, UK" },
+          { src: "images/Wimpey_Homes_S_Queensferry_UK.jpeg", caption: "Wimpey Homes South Queensferry, UK", note: "pre-opening", q: "South Queensferry, UK" },
+          { src: "images/Bomber_Command_Memorial_UK.jpeg", caption: "Bomber Command Memorial London, UK", note: "pre-opening", q: "Bomber Command Memorial, Green Park, London" }
         ]
       },
 
@@ -1238,23 +1242,23 @@
         blurb: "Premium marina portfolio (sequence fixed as requested).",
         items: [
           /* FIXED filenames to avoid broken links */
-          { src: "images/D_Marin_Dubai_Harbour.jpeg", caption: "Dubai Harbour, Dubai" },
-          { src: "images/D_Marin_Al_Seef.webp", caption: "Al Seef, Dubai" },
-          { src: "images/D_Marin_Al_Jaddaf.webp", caption: "Al Jaddaf, Dubai" },
-          { src: "images/D_Marin_Turgutreis.webp", caption: "Turgutreis, Turkey" },
-          { src: "images/D_Marin_Gocek.webp", caption: "Gocek, Turkey" },
-          { src: "images/D_Marin_Didim.webp", caption: "Didim, Turkey" },
-          { src: "images/D_Marin_Gouvia.webp", caption: "Gouvia, Corfu" },
-          { src: "images/D_Marin_Zea.webp", caption: "Zea Athens, Greece" },
-          { src: "images/D_Marin_Lefkas.webp", caption: "Lefkas, Greece" },
+          { src: "images/D_Marin_Dubai_Harbour.jpeg", caption: "Dubai Harbour, Dubai", q: "Dubai Harbour Marina" },
+          { src: "images/D_Marin_Al_Seef.webp", caption: "Al Seef, Dubai", q: "Al Seef Marina, Dubai" },
+          { src: "images/D_Marin_Al_Jaddaf.webp", caption: "Al Jaddaf, Dubai", q: "Al Jaddaf Marina, Dubai" },
+          { src: "images/D_Marin_Turgutreis.webp", caption: "Turgutreis, Turkey", q: "D-Marin Turgutreis Marina" },
+          { src: "images/D_Marin_Gocek.webp", caption: "Gocek, Turkey", q: "D-Marin Gocek Marina" },
+          { src: "images/D_Marin_Didim.webp", caption: "Didim, Turkey", q: "D-Marin Didim Marina" },
+          { src: "images/D_Marin_Gouvia.webp", caption: "Gouvia, Corfu", q: "D-Marin Gouvia Marina, Corfu" },
+          { src: "images/D_Marin_Zea.webp", caption: "Zea Athens, Greece", q: "D-Marin Zea Marina, Piraeus" },
+          { src: "images/D_Marin_Lefkas.webp", caption: "Lefkas, Greece", q: "D-Marin Lefkas Marina" },
 
-          { src: "images/D_Marin_Mandalina.webp", caption: "Mandalina, Croatia" },
-          { src: "images/D_Marin_Tribunj.webp", caption: "Tribunj, Croatia" },
-          { src: "images/D_Marin_Dalmacija.webp", caption: "Dalmacija, Croatia" },
-          { src: "images/D_Marin_Borik.webp", caption: "Borik, Croatia" },
+          { src: "images/D_Marin_Mandalina.webp", caption: "Mandalina, Croatia", q: "D-Marin Mandalina Marina, Sibenik" },
+          { src: "images/D_Marin_Tribunj.webp", caption: "Tribunj, Croatia", q: "D-Marin Tribunj Marina" },
+          { src: "images/D_Marin_Dalmacija.webp", caption: "Dalmacija, Croatia", q: "D-Marin Dalmacija Marina, Sukosan" },
+          { src: "images/D_Marin_Borik.webp", caption: "Borik, Croatia", q: "D-Marin Borik Marina, Zadar" },
 
           /* Portonovi was mentioned as broken earlier; included as an extra final tile */
-          { src: "images/D_Marin_Portonovi.jpeg", caption: "Portonovi, Montenegro" }
+          { src: "images/D_Marin_Portonovi.jpeg", caption: "Portonovi, Montenegro", q: "Portonovi Marina, Montenegro" }
         ]
       }
     };
@@ -1309,6 +1313,20 @@
     const subButtons = document.querySelectorAll(".subbtn");
     let activeSub = "hotels";
 
+    function mapsUrl(item) {
+      return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(item.q || item.caption);
+    }
+    function captionLabel(item) {
+      return item.note ? `${item.caption} (${item.note})` : item.caption;
+    }
+    // Map links open in a pop-out window (falls back to a new tab if pop-ups are blocked)
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest && e.target.closest("a.map-link");
+      if (!a) return;
+      const w = window.open(a.href, "blakeMaps", "popup=yes,width=1100,height=760,noopener=no");
+      if (w) { e.preventDefault(); try { w.opener = null; w.focus(); } catch (_) {} }
+    });
+
     function renderPortfolioGrid(key, limit = null) {
       const group = PORTFOLIO[key];
       clusterTitle.textContent = group.title;
@@ -1318,7 +1336,7 @@
       clusterGrid.innerHTML = items.map(item => `
         <figure class="portfolio-card">
           <img src="${item.src}" alt="${escapeHtml(item.caption)}" loading="lazy" />
-          <figcaption>${escapeHtml(item.caption)}</figcaption>
+          <figcaption><a class="map-link" href="${mapsUrl(item)}" target="_blank" rel="noopener" title="Open ${escapeHtml(item.caption)} in Google Maps"><svg viewBox="0 0 12 16" aria-hidden="true"><path d="M6 0.8C3.1 0.8 0.9 3 0.9 5.8c0 3.7 5.1 9.3 5.1 9.3s5.1-5.6 5.1-9.3C11.1 3 8.9 0.8 6 0.8zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"/></svg>${escapeHtml(item.caption)}</a>${item.note ? ` <span class="pre-open">(${escapeHtml(item.note)})</span>` : ""}</figcaption>
         </figure>
       `).join("");
     }
@@ -1359,7 +1377,7 @@
     /***********************
      * Overview PDF download with confirmation
      ***********************/
-    const PDF_VERSION = "20261118d";
+    const PDF_VERSION = "20261118e";
     function currentPdfName() {
       const key = currentVariantKey();
       return key && VARIANTS[key].pdf ? VARIANTS[key].pdf : "Euan_Blake_Profile.pdf";
@@ -1422,7 +1440,7 @@
         slideImg.src = item.src;
         slideImg.alt = item.caption;
         slideBg.style.backgroundImage = `url('${item.src}')`;
-        slideCaption.textContent = item.caption;
+        slideCaption.textContent = captionLabel(item);
         slideImg.style.opacity = "1";
         setDotActive(i);
       }, 160);
