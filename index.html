@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LYDH2XVH90"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LYDH2XVH90');
-</script>  
   <meta charset="UTF-8" />
   <title>Blake Consultancy – Global Marketing Communications</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,20 +8,20 @@
   <!-- SEO -->
   <meta name="description" content="Blake Consultancy delivers global marketing communications for luxury hospitality, retail-led mixed-use destinations, premium marinas and strategic repositioning across EMEA & APAC." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://YOUR-DOMAIN-HERE/" />
+  <link rel="canonical" href="https://www.blakeconsultancy.io/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Blake Consultancy – Global Marketing Communications" />
   <meta property="og:description" content="Senior advisory and campaign leadership across luxury hospitality, destinations, retail-led assets and premium marinas across EMEA & APAC." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR-DOMAIN-HERE/" />
-  <meta property="og:image" content="images/euan-blake.jpg" />
+  <meta property="og:url" content="https://www.blakeconsultancy.io/" />
+  <meta property="og:image" content="https://www.blakeconsultancy.io/images/euan-blake.jpg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blake Consultancy – Global Marketing Communications" />
   <meta name="twitter:description" content="Senior marketing communications leadership across EMEA & APAC." />
-  <meta name="twitter:image" content="images/euan-blake.jpg" />
+  <meta name="twitter:image" content="https://www.blakeconsultancy.io/images/euan-blake.jpg" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,8 +35,8 @@
     "@type":"ProfessionalService",
     "name":"Blake Consultancy",
     "description":"Global marketing communications for hospitality, retail-led destinations, premium marinas and repositioning across EMEA & APAC.",
-    "url":"https://YOUR-DOMAIN-HERE/",
-    "image":"https://YOUR-DOMAIN-HERE/images/euan-blake.jpg",
+    "url":"https://www.blakeconsultancy.io/",
+    "image":"https://www.blakeconsultancy.io/images/euan-blake.jpg",
     "areaServed":["EMEA","APAC"],
     "email":"mailto:euan@blakeconsultancy.io",
     "sameAs":["https://www.linkedin.com/in/euan-blake/"]
@@ -604,15 +595,6 @@
     html[dir="rtl"] .tab-menu { justify-content: flex-start; }
   </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LYDH2XVH90"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LYDH2XVH90');
-</script>
   
 <body>
   <a id="top"></a>
@@ -1069,7 +1051,7 @@
       <h2 data-i18n="privacyTitle">Privacy &amp; Data Protection</h2>
       <div class="card">
         <p data-i18n="privacyP1">
-          This website may collect limited personal information you voluntarily provide (for example, via email or enquiry forms). We use this information solely to respond to your request and to support professional communications.
+          This website may collect limited personal information you voluntarily provide (for example, by email). We use this information solely to respond to your request and to support professional communications.
         </p>
         <p data-i18n="privacyP2">
           If analytics are enabled, we may use aggregated site usage information to improve content and user experience. You can choose whether analytics cookies are allowed using the consent prompt.
@@ -1078,7 +1060,7 @@
           If you would like your data amended or removed, please contact us and we will respond promptly. We do not sell personal data.
         </p>
         <p class="muted" style="margin-top:0.7rem;" data-i18n="privacyNote">
-          This is generic data protection text. Replace with your final policy wording as needed.
+          Blake Consultancy (Euan Blake) is responsible for this website. For any privacy question or request, email euan@blakeconsultancy.io.
         </p>
       </div>
 
@@ -1095,7 +1077,7 @@
       <span aria-hidden="true">•</span>
       <a href="#privacy" id="openPrivacy" data-i18n="footerPrivacy">Privacy &amp; Data Protection</a>
     </div>
-    <div style="margin-top:0.7rem;">&copy; 2025 Blake Consultancy. All rights reserved.</div>
+    <div style="margin-top:0.7rem;">&copy; 2026 Blake Consultancy. All rights reserved.</div>
   </footer>
 
   <!-- Floating back-to-top -->
@@ -1445,8 +1427,8 @@
     onScroll();
 
     /***********************
-     * Analytics consent + GA4 loader (placeholder)
-     * Replace G-LYDH2XVH90 with your Measurement ID.
+     * Analytics consent + GA4 loader
+     * GA4 loads only after the visitor clicks Accept.
      ***********************/
     const CONSENT_KEY = "bc_cookie_consent_v1"; // "accept" | "decline"
     const banner = document.getElementById("consentBanner");
@@ -1454,8 +1436,9 @@
     const declineBtn = document.getElementById("declineCookies");
 
     function loadGA4() {
-      const GA_ID = "G-LYDH2XVH90"; // <- replace
-      if (GA_ID === "G-LYDH2XVH90") return; // safety: don't load placeholder
+      const GA_ID = "G-LYDH2XVH90";
+      if (window.__ga4Loaded) return;
+      window.__ga4Loaded = true;
 
       const s1 = document.createElement("script");
       s1.async = true;
@@ -1600,10 +1583,10 @@
         footerPrivacy: "Privacy & Data Protection",
 
         privacyTitle: "Privacy & Data Protection",
-        privacyP1: "This website may collect limited personal information you voluntarily provide (for example, via email or enquiry forms). We use this information solely to respond to your request and to support professional communications.",
+        privacyP1: "This website may collect limited personal information you voluntarily provide (for example, by email). We use this information solely to respond to your request and to support professional communications.",
         privacyP2: "If analytics are enabled, we may use aggregated site usage information to improve content and user experience. You can choose whether analytics cookies are allowed using the consent prompt.",
         privacyP3: "If you would like your data amended or removed, please contact us and we will respond promptly. We do not sell personal data.",
-        privacyNote: "This is generic data protection text. Replace with your final policy wording as needed.",
+        privacyNote: "Blake Consultancy (Euan Blake) is responsible for this website. For any privacy question or request, email euan@blakeconsultancy.io.",
 
         consentBanner: "We use optional analytics cookies to understand site usage and improve experience. You can accept or decline.",
         accept: "Accept",
