@@ -1330,6 +1330,7 @@
     /***********************
      * Overview PDF download with confirmation
      ***********************/
+    const PDF_VERSION = "20261118b";
     function currentPdfName() {
       const key = currentVariantKey();
       return key && VARIANTS[key].pdf ? VARIANTS[key].pdf : "Euan_Blake_Profile.pdf";
@@ -1338,7 +1339,7 @@
       const ok = window.confirm("Download the Overview PDF now?");
       if (!ok) return;
       const a = document.createElement("a");
-      a.href = "downloads/" + currentPdfName();
+      a.href = "downloads/" + currentPdfName() + "?v=" + PDF_VERSION;
       a.target = "_blank";
       a.rel = "noopener";
       a.download = currentPdfName();
