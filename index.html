@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- SEO -->
-  <meta name="description" content="Blake Consultancy delivers global marketing communications for luxury hospitality, retail-led mixed-use destinations, premium marinas and strategic repositioning across EMEA & APAC." />
+  <meta name="description" content="Blake Consultancy delivers global marketing communications for luxury hospitality, retail-led mixed-use destinations, premium marinas and strategic repositioning across EMEA, the Indian Ocean and APAC." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.blakeconsultancy.io/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Blake Consultancy – Global Marketing Communications" />
-  <meta property="og:description" content="Senior advisory and campaign leadership across luxury hospitality, destinations, retail-led assets and premium marinas across EMEA & APAC." />
+  <meta property="og:description" content="Senior advisory and campaign leadership across luxury hospitality, destinations, retail-led assets and premium marinas across EMEA, the Indian Ocean and APAC." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.blakeconsultancy.io/" />
   <meta property="og:image" content="https://www.blakeconsultancy.io/images/euan-blake.jpg" />
@@ -20,7 +20,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blake Consultancy – Global Marketing Communications" />
-  <meta name="twitter:description" content="Senior marketing communications leadership across EMEA & APAC." />
+  <meta name="twitter:description" content="Senior marketing communications leadership across EMEA, the Indian Ocean and APAC." />
   <meta name="twitter:image" content="https://www.blakeconsultancy.io/images/euan-blake.jpg" />
 
   <!-- Google Fonts -->
@@ -34,10 +34,10 @@
     "@context":"https://schema.org",
     "@type":"ProfessionalService",
     "name":"Blake Consultancy",
-    "description":"Global marketing communications for hospitality, retail-led destinations, premium marinas and repositioning across EMEA & APAC.",
+    "description":"Global marketing communications for hospitality, retail-led destinations, premium marinas and repositioning across EMEA, the Indian Ocean and APAC.",
     "url":"https://www.blakeconsultancy.io/",
     "image":"https://www.blakeconsultancy.io/images/euan-blake.jpg",
-    "areaServed":["EMEA","APAC"],
+    "areaServed":["EMEA","Indian Ocean","APAC"],
     "email":"mailto:euan@blakeconsultancy.io",
     "sameAs":["https://www.linkedin.com/in/euan-blake/"]
   }
@@ -147,6 +147,22 @@
       transition: transform 0.18s ease, background 0.18s ease;
     }
     .btn:hover { transform: translateY(-1px); }
+
+    /* Hero profile download button */
+    .btn-download {
+      margin-top: 1rem;
+      padding: 0.6rem 1.25rem 0.6rem 0.9rem;
+      gap: 0.7rem;
+      background: #111111;
+      color: #F5F3EE;
+      border-color: #111111;
+      box-shadow: 0 6px 18px rgba(17,17,17,0.12);
+    }
+    .btn-download:hover { background: #222222; }
+    .btn-download svg { width: 34px; height: 38px; flex: 0 0 auto; letter-spacing: 0; }
+    .btn-download svg text { letter-spacing: 0; }
+    .btn-download .dl-text { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.15; }
+    .btn-download .dl-sub { font-size: 0.68rem; letter-spacing: 0.08em; color: #C3B8A5; text-transform: none; }
     .btn.primary {
       background: #111111;
       color: #F5F3EE;
@@ -607,7 +623,7 @@
     <h1 data-i18n="brand">BLAKE CONSULTANCY</h1>
     <p class="lede" data-i18n="lede">
       Global marketing communications services for hotel assets, new leisure developments, real estate specialist in launches and tactical repositioning for value discovery.
-      Senior advisory and campaign leadership across luxury hospitality, destinations and masterplanned communities across EMEA & APAC.
+      Senior advisory and campaign leadership across luxury hospitality, destinations and masterplanned communities across EMEA, the Indian Ocean and APAC.
     </p>
 
     <div class="topbar">
@@ -649,8 +665,21 @@
         <div class="hero-card">
           <div class="hero-headline" data-i18n="heroHeadline">Board-level Marketing Communications Leadership</div>
           <p class="hero-sub" data-i18n="heroSub">
-            Two decades of international leadership across luxury hospitality, destination brands, retail-led mixed-use assets and premium marinas — delivering clear positioning, earned visibility and measurable commercial outcomes across EMEA & APAC.
+            Two decades of international leadership across luxury hospitality, destination brands, retail-led mixed-use assets and premium marinas — delivering clear positioning, earned visibility and measurable commercial outcomes across EMEA, the Indian Ocean and APAC.
           </p>
+
+          <button class="btn btn-download" type="button" id="heroDownload" aria-label="Download profile (PDF)">
+            <svg viewBox="0 0 30 34" aria-hidden="true" focusable="false">
+              <path d="M5 1.5h13.5l7 7V22" fill="none" stroke="#F5F3EE" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M18.5 1.5v7h7" fill="none" stroke="#F5F3EE" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M5 1.5v29h7.5M25.5 30.5H20" fill="none" stroke="#F5F3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="0.5" y="9" width="17" height="9" rx="1.5" fill="#C3B8A5"/>
+              <text x="9" y="16.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="6.6" font-weight="700" fill="#111111" letter-spacing="0">PDF</text>
+              <path d="M16.25 20v8.5" stroke="#C3B8A5" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M12 25.5l4.25 5 4.25-5" fill="none" stroke="#C3B8A5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="dl-text"><span data-i18n="heroDownloadBtn">Download Profile</span><span class="dl-sub">One-page PDF</span></span>
+          </button>
 
           <div class="grid-2" style="margin-top:1.1rem;">
             <div>
@@ -659,7 +688,7 @@
                 As a senior global marketing communications thought-leader, Euan Blake is a specialist in delivering award-winning strategies and campaigns within the luxury hospitality sector. Alongside deep B2C experience, he has also delivered high-impact strategic B2B and corporate guidance across all media channels worldwide.
               </p>
               <p data-i18n="aboutP2">
-                Previous employers and agency clientele range broadly across hotel and resort operators, developers and construction firms, advisory services and retail asset managers. The practice offers strategic communications expertise and multi-territory campaign execution across EMEA & APAC.
+                Previous employers and agency clientele range broadly across hotel and resort operators, developers and construction firms, advisory services and retail asset managers. The practice offers strategic communications expertise and multi-territory campaign execution across EMEA, the Indian Ocean and APAC.
               </p>
             </div>
 
@@ -1330,22 +1359,25 @@
     /***********************
      * Overview PDF download with confirmation
      ***********************/
+    const PDF_VERSION = "20261118d";
     function currentPdfName() {
       const key = currentVariantKey();
       return key && VARIANTS[key].pdf ? VARIANTS[key].pdf : "Euan_Blake_Profile.pdf";
     }
-    document.getElementById("downloadOverview").addEventListener("click", () => {
-      const ok = window.confirm("Download the Overview PDF now?");
-      if (!ok) return;
+    function downloadProfile() {
       const a = document.createElement("a");
-      a.href = "downloads/" + currentPdfName();
+      a.href = "downloads/" + currentPdfName() + "?v=" + PDF_VERSION;
       a.target = "_blank";
       a.rel = "noopener";
       a.download = currentPdfName();
       document.body.appendChild(a);
       a.click();
       a.remove();
+    }
+    document.getElementById("downloadOverview").addEventListener("click", () => {
+      if (window.confirm("Download the Overview PDF now?")) downloadProfile();
     });
+    document.getElementById("heroDownload").addEventListener("click", downloadProfile);
 
     /***********************
      * Slideshow (loops through ALL portfolio images)
@@ -1510,7 +1542,7 @@
         presentationModeBtn: "Presentation Mode",
         fullscreenBtn: "Fullscreen",
 
-        lede: "Global marketing communications for hotel assets, new leisure developments and tactical repositioning for value discovery. Senior advisory and campaign leadership across luxury hospitality, resorts and destination brands across EMEA & APAC.",
+        lede: "Global marketing communications for hotel assets, new leisure developments and tactical repositioning for value discovery. Senior advisory and campaign leadership across luxury hospitality, resorts and destination brands across EMEA, the Indian Ocean and APAC.",
         tabOverview: "Overview",
         tabServices: "Services",
         tabExperience: "Experience",
@@ -1521,10 +1553,10 @@
 
         overviewTitle: "Overview",
         heroHeadline: "Board-level Marketing Communications Leadership",
-        heroSub: "Two decades of international leadership across luxury hospitality, destination brands, retail-led mixed-use assets and premium marinas — delivering clear positioning, earned visibility and measurable commercial outcomes across EMEA & APAC.",
+        heroSub: "Two decades of international leadership across luxury hospitality, destination brands, retail-led mixed-use assets and premium marinas — delivering clear positioning, earned visibility and measurable commercial outcomes across EMEA, the Indian Ocean and APAC.",
         aboutTitle: "About Blake Consultancy",
         aboutP1: "As a senior global marketing communications thought-leader, Euan Blake is a specialist in delivering award-winning strategies and campaigns within the luxury hospitality sector. Alongside deep B2C experience, he has also delivered high-impact strategic B2B and corporate guidance across all media channels worldwide.",
-        aboutP2: "Previous employers and agency clientele range broadly across hotel and resort operators, developers and construction firms, advisory services and retail asset managers. The practice offers strategic communications expertise and multi-territory campaign execution across EMEA & APAC.",
+        aboutP2: "Previous employers and agency clientele range broadly across hotel and resort operators, developers and construction firms, advisory services and retail asset managers. The practice offers strategic communications expertise and multi-territory campaign execution across EMEA, the Indian Ocean and APAC.",
         coreCompTitle: "Core Competencies",
 
         cc1: "Integrated global communications strategy",
@@ -1597,6 +1629,7 @@
         contactTitle: "Contact",
         contactIntro: "For consultancy engagements, project discussions or speaking opportunities, please get in touch via email or LinkedIn.",
         downloadBtn: "Overview (Download)",
+        heroDownloadBtn: "Download Profile",
         emailBtn: "Email",
         linkedinBtn: "LinkedIn",
         backToTopInline: "Back to top",
@@ -1628,7 +1661,7 @@
         tabContact: "Контакт",
         overviewTitle: "Обзор",
         heroHeadline: "Маркетинговые коммуникации на уровне совета директоров",
-        heroSub: "Два десятилетия международного лидерства в сфере люксового гостеприимства, брендов направлений, retail-mixed-use активов и премиальных марин — с чётким позиционированием и измеримыми результатами в EMEA и APAC.",
+        heroSub: "Два десятилетия международного лидерства в сфере люксового гостеприимства, брендов направлений, retail-mixed-use активов и премиальных марин — с чётким позиционированием и измеримыми результатами в EMEA, Индийском океане и APAC.",
         portfolioTitle: "Портфолио",
         portfolioIntro: "Примеры поддержанных активов. Наведите на категорию для предпросмотра — нажмите, чтобы открыть.",
         portfolioHint: "Категории:",
@@ -1640,6 +1673,7 @@
         contactTitle: "Контакт",
         contactIntro: "По вопросам сотрудничества, проектов или выступлений свяжитесь по email или через LinkedIn.",
         downloadBtn: "Профиль (скачать)",
+        heroDownloadBtn: "Скачать профиль",
         emailBtn: "Email",
         linkedinBtn: "LinkedIn",
         backToTopInline: "Наверх",
@@ -1664,7 +1698,7 @@
         tabContact: "Contatti",
         overviewTitle: "Panoramica",
         heroHeadline: "Marketing Communications a livello board",
-        heroSub: "Due decenni di leadership internazionale tra ospitalità di lusso, destination brand, asset retail-mixed-use e marine premium — con posizionamento chiaro e risultati misurabili in EMEA e APAC.",
+        heroSub: "Due decenni di leadership internazionale tra ospitalità di lusso, destination brand, asset retail-mixed-use e marine premium — con posizionamento chiaro e risultati misurabili in EMEA, Oceano Indiano e APAC.",
         portfolioTitle: "Portfolio",
         portfolioIntro: "Selezione illustrativa di asset supportati. Passa sopra una categoria per l’anteprima — clicca per aprire.",
         portfolioHint: "Categorie:",
@@ -1676,6 +1710,7 @@
         contactTitle: "Contatti",
         contactIntro: "Per incarichi di consulenza, progetti o interventi, contattami via email o su LinkedIn.",
         downloadBtn: "Profilo (Download)",
+        heroDownloadBtn: "Scarica il profilo",
         emailBtn: "Email",
         linkedinBtn: "LinkedIn",
         backToTopInline: "Torna su",
@@ -1700,7 +1735,7 @@
         tabContact: "Kontakt",
         overviewTitle: "Überblick",
         heroHeadline: "Marketing Communications auf Vorstandsebene",
-        heroSub: "Zwei Jahrzehnte internationale Führung in Luxury Hospitality, Destination Brands, Retail-Mixed-Use Assets und Premium-Marinas — mit klarer Positionierung und messbaren Ergebnissen in EMEA & APAC.",
+        heroSub: "Zwei Jahrzehnte internationale Führung in Luxury Hospitality, Destination Brands, Retail-Mixed-Use Assets und Premium-Marinas — mit klarer Positionierung und messbaren Ergebnissen in EMEA, im Indischen Ozean und in APAC.",
         portfolioTitle: "Portfolio",
         portfolioIntro: "Auswahl unterstützter Assets. Kategorie für Vorschau berühren — klicken zum Öffnen.",
         portfolioHint: "Kategorien:",
@@ -1712,6 +1747,7 @@
         contactTitle: "Kontakt",
         contactIntro: "Für Beratungsmandate, Projektgespräche oder Speaking-Anfragen kontaktieren Sie mich bitte per E-Mail oder über LinkedIn.",
         downloadBtn: "Profil (Download)",
+        heroDownloadBtn: "Profil herunterladen",
         emailBtn: "Email",
         linkedinBtn: "LinkedIn",
         backToTopInline: "Nach oben",
@@ -1736,7 +1772,7 @@
         tabContact: "التواصل",
         overviewTitle: "نظرة عامة",
         heroHeadline: "قيادة اتصالات التسويق على مستوى الإدارة",
-        heroSub: "خبرة تمتد لعقدين في الضيافة الفاخرة وعلامات الوجهات والأصول متعددة الاستخدامات والمرافئ الراقية — مع تموضع واضح ونتائج قابلة للقياس ضمن EMEA وAPAC.",
+        heroSub: "خبرة تمتد لعقدين في الضيافة الفاخرة وعلامات الوجهات والأصول متعددة الاستخدامات والمرافئ الراقية — مع تموضع واضح ونتائج قابلة للقياس ضمن EMEA والمحيط الهندي وAPAC.",
         portfolioTitle: "الأعمال",
         portfolioIntro: "مجموعة مختارة من الأصول التي تم دعمها. مرّر فوق الفئة للمعاينة — اضغط للفتح.",
         portfolioHint: "الفئات:",
@@ -1748,6 +1784,7 @@
         contactTitle: "التواصل",
         contactIntro: "لأعمال الاستشارات أو مناقشة المشاريع أو فرص التحدث، يُرجى التواصل عبر البريد الإلكتروني أو LinkedIn.",
         downloadBtn: "الملف (تنزيل)",
+        heroDownloadBtn: "تنزيل الملف الشخصي",
         emailBtn: "البريد",
         linkedinBtn: "LinkedIn",
         backToTopInline: "العودة للأعلى",
@@ -1776,14 +1813,14 @@
     const VARIANTS = {
       "pr-hosp": {
         title: "Euan Blake – Communications & PR Leadership, Luxury Hospitality",
-        lede: "Communications & PR · Luxury hospitality, island resorts and destinations · EMEA, APAC & Indian Ocean",
+        lede: "Communications & PR · Luxury hospitality, island resorts and destinations · EMEA, Indian Ocean & APAC",
         headline: "International Communications & PR Leadership for Luxury Hospitality",
-        sub: "Twenty years of launches, reputation and earned media for island resorts, hotel groups and destinations across EMEA, APAC and the Indian Ocean – measured with AI-enabled ROI reporting.",
+        sub: "Twenty years of launches, reputation and earned media for island resorts, hotel groups and destinations across EMEA, the Indian Ocean and APAC – measured with AI-enabled ROI reporting.",
         aboutTitle: "Communications that start with the finished story",
         p1: "Euan Blake pictures the headline first, then builds the media plan, partnerships and press programme that get it written. As Vice President Communications at Atmosphere Core he led global communications for nine island resorts and three brands (OZEN, Atmosphere, OBLU), with 23 communications staff in 13 agencies and consultancies across 10 markets.",
         p2: "His work spans launches (RAAYA by Atmosphere), crisis and reputation, ESG and CSR (including United Nations acknowledgement for World Environment Day), executive profiling and broadcast media. Best International Marketing Communications Director 2025, Food & Travel Italia Awards.",
         cc: ["Media relations & press programmes","Launch & pre-opening communications","Crisis communications & reputation management","Agency & multi-market team leadership","Executive profiling & thought leadership","CSR, ESG & sustainability communications","Influencer & creator programmes","AI-enabled media ROI measurement"],
-        svc: {"h1": "Communications & PR for Luxury Hotels, Resorts and Destinations", "p1": "Senior communications leadership for hotel groups, island resorts and destinations – from pre-opening and launch to reputation, crisis and ESG – across EMEA, APAC and the Indian Ocean.", "l": ["Launch and pre-opening communications, press trips and media FAM programmes", "Global PR strategy and multi-market agency leadership", "Crisis communications and reputation management", "Executive profiling and corporate communications", "CSR, ESG and sustainability storytelling, including certification content", "Influencer and creator programmes with AI-enabled ROI reporting"], "a": ["Start with the finished headline, then work back to the story, media plan and partnerships that get it written.", "Agencies and in-market teams work to one narrative and one set of KPIs across every market.", "AI-enabled media monitoring and ROI dashboards show coverage quality and media value – AVE is reported as media value, never as revenue."]},
+        svc: {"h1": "Communications & PR for Luxury Hotels, Resorts and Destinations", "p1": "Senior communications leadership for hotel groups, island resorts and destinations – from pre-opening and launch to reputation, crisis and ESG – across EMEA, the Indian Ocean and APAC.", "l": ["Launch and pre-opening communications, press trips and media FAM programmes", "Global PR strategy and multi-market agency leadership", "Crisis communications and reputation management", "Executive profiling and corporate communications", "CSR, ESG and sustainability storytelling, including certification content", "Influencer and creator programmes with AI-enabled ROI reporting"], "a": ["Start with the finished headline, then work back to the story, media plan and partnerships that get it written.", "Agencies and in-market teams work to one narrative and one set of KPIs across every market.", "AI-enabled media monitoring and ROI dashboards show coverage quality and media value – AVE is reported as media value, never as revenue."]},
         pdf: "Euan_Blake_Profile_PR.pdf",
         results: [
           "RAAYA by Atmosphere launch: 157+ media placements from 54 journalist visits (approximately USD 1.78m AVE)",
@@ -1794,7 +1831,7 @@
       },
       "pr-prop": {
         title: "Euan Blake – Corporate Communications & PR, Real Estate",
-        lede: "Communications & PR · Real estate, developments and investors · EMEA & APAC",
+        lede: "Communications & PR · Real estate, developments and investors · EMEA, Indian Ocean & APAC",
         headline: "Corporate Communications & PR for Real Estate and Developments",
         sub: "Communications for developers, investors and advisers – from seven years with global property adviser JLL to landmark launches, masterplanned communities and planning consent.",
         aboutTitle: "From the boardroom to the broadcast studio",
@@ -1812,12 +1849,12 @@
       },
       "commercial-hosp": {
         title: "Euan Blake – Commercial Leadership: Sales, Revenue & Marketing Communications, Luxury Hospitality",
-        lede: "Commercial Leadership · Sales, Revenue & Marketing Communications · Luxury hotels and resorts · Maldives, Seychelles, UAE & Thailand",
+        lede: "Commercial Leadership · Sales, Revenue & Marketing Communications · Luxury hotels and resorts · EMEA, Indian Ocean & APAC",
         headline: "Commercial Leadership that Unites Sales, Revenue and Marketing Communications",
-        sub: "Growing occupancy and protecting rate across luxury hotels and resorts in the Maldives, Seychelles, UAE and Thailand – with sales, distribution, revenue, e-commerce and marketing communications working to one commercial plan.",
+        sub: "Growing occupancy and protecting rate across luxury hotels and resorts in EMEA, the Indian Ocean and APAC – with sales, distribution, revenue, e-commerce and marketing communications working to one commercial plan.",
         aboutTitle: "One commercial plan, one team",
         p1: "Euan Blake runs commercial teams where sales, revenue, e-commerce and marketing communications pull in the same direction. At JA Manafaru, an integrated repositioning – 'The Real Maldives' – lifted high-season occupancy from the low 20s% to the mid 40s%. At COMO Hotels & Resorts he held rate through the Maldives price war, declining low-rate volume and rebuilding European demand: UK occupancy +17% and Germany +14% (2018, year on year), outweighing Asia losses.",
-        p2: "As Group Commercial Director at VIKASA he wrote the board-level commercial strategy – a two-audience route to market, five-layer distribution, rate discipline, VIKASA+ loyalty and CRM, and the 2027 sales and events plan – leading sales, revenue and e-commerce alongside the CMO. At Atmosphere Core he ran a USD 1.2m+ annual communications budget across nine island resorts; at Accor he lifted conference sales by 40%.",
+        p2: "As Group Commercial Director at VIKASA he wrote the board-level commercial strategy – a two-audience route to market, five-layer distribution, rate discipline, VIKASA+ loyalty and CRM, and the 2027 sales and events plan – leading sales, revenue and e-commerce alongside the CMO. At Atmosphere Core he ran a USD 1.2m+ annual communications budget across nine island resorts; at Accor he lifted B2C travel fair sales by 40% on the previous event.",
         cc: ["Board-level commercial strategy","Sales, distribution & e-commerce","Revenue management & rate discipline","Marketing communications, PR & brand","Direct bookings, CRM & loyalty","Integrated sales & marketing team leadership","Trade shows, events & MICE","Data, BI & AI-enabled ROI measurement"],
         svc: {"h1": "Commercial Leadership: Sales, Revenue & Marketing Communications", "p1": "Commercial strategy and leadership for luxury hotels, resorts and wellness groups – bringing sales, distribution, revenue, e-commerce and marketing communications under one plan.", "l": ["Board-level commercial strategy and annual sales and events plans", "Distribution architecture and route-to-market planning", "Rate discipline and ADR protection – value-adds before discounts", "Direct booking, CRM, database and loyalty programmes", "Integrated marketing communications aligned to revenue targets", "Trade shows, MICE and corporate events"], "a": ["Start with the commercial target, then build the story, channels and sales activity that deliver it.", "Sales, revenue and marketing communications work to one plan, with weekly revenue reviews and shared KPIs.", "BI and AI-enabled measurement (Power BI, Fornova BI, STR) connect campaigns to occupancy, rate and revenue."]},
         pdf: "Euan_Blake_Profile_Commercial.pdf",
@@ -1825,13 +1862,13 @@
           "JA Manafaru: high-season occupancy from the low 20s% to the mid 40s% (2022/23)",
           "COMO Maldives: ADR protected through a price war; UK occupancy +17% and Germany +14% (2018 YoY), outweighing Asia losses",
           "RAAYA by Atmosphere: launch outperformed opening occupancy forecasts",
-          "Accor Thailand: conference sales up 40% and over THB 2m generated at Thai Teaw Thai",
+          "Accor Thailand: B2C travel fair sales up 40% on the previous event, with over THB 2m generated at Thai Teaw Thai",
           "Commercial and communications scope: 27 hotels and resorts and 14 premium marinas; USD 1.2m+ annual communications budget"
         ]
       },
       "commercial-prop": {
         title: "Euan Blake – Commercial, Business Development & Marketing Communications, Real Estate",
-        lede: "Commercial, Business Development & Marketing Communications · Real estate, developments and agencies · EMEA & APAC",
+        lede: "Commercial, Business Development & Marketing Communications · Real estate, developments and agencies · EMEA, Indian Ocean & APAC",
         headline: "Commercial, Business Development & Marketing Communications for Real Estate",
         sub: "Pitch-led growth for developers, asset managers and agencies – winning mandates, launching assets and making marketing communications deliver leasing, sales and asset value.",
         aboutTitle: "Winning the mandate, then delivering it",
@@ -1849,9 +1886,9 @@
       },
       "marketing-hosp": {
         title: "Euan Blake – Marketing & Brand Leadership, Luxury Hospitality",
-        lede: "Marketing & Brand · Luxury hospitality, island resorts and marinas · EMEA, APAC & Indian Ocean",
+        lede: "Marketing & Brand · Luxury hospitality, island resorts and marinas · EMEA, Indian Ocean & APAC",
         headline: "Marketing & Brand Leadership for Luxury Hospitality",
-        sub: "Launches, repositioning and integrated campaigns for 27 hotels and resorts across the Maldives, Seychelles, UAE and Thailand – and 14 premium marinas across EMEA.",
+        sub: "Launches, repositioning and integrated campaigns for 27 hotels and resorts across EMEA, the Indian Ocean and APAC – and 14 premium marinas across EMEA.",
         aboutTitle: "See the picture, then build it",
         p1: "Euan Blake sees the angle others miss, paints the finished picture, then works back to the strategy, content and commercial plan. He launched RAAYA by Atmosphere, which outperformed its opening occupancy forecasts, and repositioned JA Manafaru with 'The Real Maldives', lifting occupancy from the low 20s% to the mid 40s%.",
         p2: "His toolkit runs from brand positioning, video and content to SEO, GEO and AEO visibility, CRM and loyalty, influencer programmes and AI-enabled ROI measurement. Best International Marketing Communications Director 2025, Food & Travel Italia Awards.",
@@ -1861,13 +1898,13 @@
         results: [
           "RAAYA by Atmosphere: launch outperformed opening occupancy forecasts",
           "JA Manafaru 'The Real Maldives': occupancy from the low 20s% to the mid 40s%",
-          "27 hotels and resorts across the Maldives, Seychelles, UAE and Thailand",
+          "27 hotels and resorts across EMEA, the Indian Ocean and APAC",
           "D-Marin: repositioning of 14 premium yacht marinas across EMEA"
         ]
       },
       "marketing-prop": {
         title: "Euan Blake – Marketing & Brand Strategy, Real Estate",
-        lede: "Marketing & Brand · Real estate, retail destinations and masterplanned communities · EMEA & APAC",
+        lede: "Marketing & Brand · Real estate, retail destinations and masterplanned communities · EMEA, Indian Ocean & APAC",
         headline: "Marketing & Brand Strategy for Real Estate and Developments",
         sub: "Naming, branding and launch marketing for shopping centres, masterplanned communities and landmark assets – 9 malls, 5 communities and an iconic Mayfair office.",
         aboutTitle: "Brands that move assets",
