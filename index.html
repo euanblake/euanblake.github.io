@@ -1330,15 +1330,18 @@
     /***********************
      * Overview PDF download with confirmation
      ***********************/
-    const overviewPdfPath = "downloads/Euan_Blake_Profile.pdf"; // must exist in repo
+    function currentPdfName() {
+      const key = currentVariantKey();
+      return key && VARIANTS[key].pdf ? VARIANTS[key].pdf : "Euan_Blake_Profile.pdf";
+    }
     document.getElementById("downloadOverview").addEventListener("click", () => {
       const ok = window.confirm("Download the Overview PDF now?");
       if (!ok) return;
       const a = document.createElement("a");
-      a.href = overviewPdfPath;
+      a.href = "downloads/" + currentPdfName();
       a.target = "_blank";
       a.rel = "noopener";
-      a.download = "Euan_Blake_Profile.pdf";
+      a.download = currentPdfName();
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -1780,6 +1783,8 @@
         p1: "Euan Blake pictures the headline first, then builds the media plan, partnerships and press programme that get it written. As Vice President Communications at Atmosphere Core he led global communications for nine island resorts and three brands (OZEN, Atmosphere, OBLU), with 23 communications staff in 13 agencies and consultancies across 10 markets.",
         p2: "His work spans launches (RAAYA by Atmosphere), crisis and reputation, ESG and CSR (including United Nations acknowledgement for World Environment Day), executive profiling and broadcast media. Best International Marketing Communications Director 2025, Food & Travel Italia Awards.",
         cc: ["Media relations & press programmes","Launch & pre-opening communications","Crisis communications & reputation management","Agency & multi-market team leadership","Executive profiling & thought leadership","CSR, ESG & sustainability communications","Influencer & creator programmes","AI-enabled media ROI measurement"],
+        svc: {"h1": "Communications & PR for Luxury Hotels, Resorts and Destinations", "p1": "Senior communications leadership for hotel groups, island resorts and destinations – from pre-opening and launch to reputation, crisis and ESG – across EMEA, APAC and the Indian Ocean.", "l": ["Launch and pre-opening communications, press trips and media FAM programmes", "Global PR strategy and multi-market agency leadership", "Crisis communications and reputation management", "Executive profiling and corporate communications", "CSR, ESG and sustainability storytelling, including certification content", "Influencer and creator programmes with AI-enabled ROI reporting"], "a": ["Start with the finished headline, then work back to the story, media plan and partnerships that get it written.", "Agencies and in-market teams work to one narrative and one set of KPIs across every market.", "AI-enabled media monitoring and ROI dashboards show coverage quality and media value – AVE is reported as media value, never as revenue."]},
+        pdf: "Euan_Blake_Profile_PR.pdf",
         results: [
           "RAAYA by Atmosphere launch: 157+ media placements from 54 journalist visits (approximately USD 1.78m AVE)",
           "H1 2025 vs H1 2024: published articles up 208% (576 to 1,775) and AVE up 122%",
@@ -1796,6 +1801,8 @@
         p1: "Euan Blake spent seven years with global property adviser JLL, rising from Press Officer to PR Manager EMEA: running broadcast strategy with CNN, BBC, CNBC and Bloomberg, managing media relations across 13 business units, and securing the first CNN Global News report on the future asset value of tall buildings after 9/11.",
         p2: "He has since led communications for W Hotel London's investment and build programme, supported the planning of the Bomber Command Memorial at Hyde Park Corner, won Land Securities' Trinity Leeds launch, and delivered statutory Statements of Community Involvement that supported planning consent.",
         cc: ["Corporate & divisional communications","Broadcast & media relations","Launch PR for developments and assets","Planning & community engagement","Executive profiling","Crisis & reputation management","Investor & stakeholder communications","AI-enabled media ROI measurement"],
+        svc: {"h1": "Corporate Communications & PR for Real Estate and Developments", "p1": "Communications for developers, investors, asset managers and advisers – built on seven years with global property adviser JLL and launches for landmark retail, residential and mixed-use schemes.", "l": ["Corporate and divisional communications for property advisers and investors", "Launch PR for developments, shopping centres and masterplanned communities", "Broadcast and media relations strategy", "Planning, community engagement and Statements of Community Involvement", "Executive profiling and thought leadership", "Crisis, reputation and stakeholder communications"], "a": ["Start with the finished headline, then work back to the story, media plan and stakeholders that make it land.", "Messaging links each asset's story to investor value, leasing and planning outcomes.", "AI-enabled media monitoring and ROI dashboards report coverage quality and value transparently."]},
+        pdf: "Euan_Blake_Profile_PR_Real_Estate.pdf",
         results: [
           "JLL: first CNN Global News report on the future asset value of tall buildings after 9/11; recognised by JLL's Global Executive Board",
           "Led communications for JLL's acquisition of Upstream Strategies – taking sustainability into the boardroom",
@@ -1812,6 +1819,8 @@
         p1: "Euan Blake runs commercial teams where sales, revenue, e-commerce and marketing communications pull in the same direction. At JA Manafaru, an integrated repositioning – 'The Real Maldives' – lifted high-season occupancy from the low 20s% to the mid 40s%. At COMO Hotels & Resorts he held rate through the Maldives price war, declining low-rate volume and rebuilding European demand: UK occupancy +17% and Germany +14% (2018, year on year), outweighing Asia losses.",
         p2: "As Group Commercial Director at VIKASA he wrote the board-level commercial strategy – a two-audience route to market, five-layer distribution, rate discipline, VIKASA+ loyalty and CRM, and the 2027 sales and events plan – leading sales, revenue and e-commerce alongside the CMO. At Atmosphere Core he ran a USD 1.2m+ annual communications budget across nine island resorts; at Accor he lifted conference sales by 40%.",
         cc: ["Board-level commercial strategy","Sales, distribution & e-commerce","Revenue management & rate discipline","Marketing communications, PR & brand","Direct bookings, CRM & loyalty","Integrated sales & marketing team leadership","Trade shows, events & MICE","Data, BI & AI-enabled ROI measurement"],
+        svc: {"h1": "Commercial Leadership: Sales, Revenue & Marketing Communications", "p1": "Commercial strategy and leadership for luxury hotels, resorts and wellness groups – bringing sales, distribution, revenue, e-commerce and marketing communications under one plan.", "l": ["Board-level commercial strategy and annual sales and events plans", "Distribution architecture and route-to-market planning", "Rate discipline and ADR protection – value-adds before discounts", "Direct booking, CRM, database and loyalty programmes", "Integrated marketing communications aligned to revenue targets", "Trade shows, MICE and corporate events"], "a": ["Start with the commercial target, then build the story, channels and sales activity that deliver it.", "Sales, revenue and marketing communications work to one plan, with weekly revenue reviews and shared KPIs.", "BI and AI-enabled measurement (Power BI, Fornova BI, STR) connect campaigns to occupancy, rate and revenue."]},
+        pdf: "Euan_Blake_Profile_Commercial.pdf",
         results: [
           "JA Manafaru: high-season occupancy from the low 20s% to the mid 40s% (2022/23)",
           "COMO Maldives: ADR protected through a price war; UK occupancy +17% and Germany +14% (2018 YoY), outweighing Asia losses",
@@ -1829,6 +1838,8 @@
         p1: "At Innesco Euan Blake wrote, presented and won the GBP 300k launch of Land Securities' Trinity Leeds, plus Silverstein Properties Poland (GBP 100k+) and Addlestone Town Centre (GBP 200k+ per year). At TOAST Creative in Sydney he won Sekisui House's The Orchards, billing AUD 3m in the first year, and established PR as a new revenue stream.",
         p2: "At D-Marin he aligned marketing KPIs with investor objectives across a 14-marina private-equity portfolio, and in hospitality he has grown demand while protecting rate – JA Manafaru occupancy from the low 20s% to the mid 40s%.",
         cc: ["New business & pitch leadership","Investor-aligned commercial strategy","Asset launch & leasing collateral","Brand audits & repositioning","Client & retainer development","Sales & distribution","CRM & database building","Data & BI reporting"],
+        svc: {"h1": "Commercial, Business Development & Marketing Communications for Real Estate", "p1": "New business, launch and asset marketing for developers, investors and agencies – winning mandates and making communications deliver leasing, sales and asset value.", "l": ["Pitch strategy and new-business leadership", "Asset launch marketing and retail leasing collateral", "Brand audits and repositioning for value discovery", "Marketing KPIs aligned with investor objectives", "Client and retainer development", "Community engagement supporting planning consent"], "a": ["Start with the commercial outcome – leasing, sales or asset value – then work back to the brand and communications plan.", "Every campaign is tied to investor objectives and agent needs.", "Measurement and BI reporting keep spend accountable to results."]},
+        pdf: "Euan_Blake_Profile_Commercial_Real_Estate.pdf",
         results: [
           "Won the GBP 300k launch of Land Securities' Trinity Leeds",
           "Sekisui House's The Orchards, Sydney: AUD 3m billing in year one",
@@ -1845,6 +1856,8 @@
         p1: "Euan Blake sees the angle others miss, paints the finished picture, then works back to the strategy, content and commercial plan. He launched RAAYA by Atmosphere, which outperformed its opening occupancy forecasts, and repositioned JA Manafaru with 'The Real Maldives', lifting occupancy from the low 20s% to the mid 40s%.",
         p2: "His toolkit runs from brand positioning, video and content to SEO, GEO and AEO visibility, CRM and loyalty, influencer programmes and AI-enabled ROI measurement. Best International Marketing Communications Director 2025, Food & Travel Italia Awards.",
         cc: ["Brand positioning & launches","Integrated campaigns (earned / paid / owned / social)","Repositioning & value discovery","Video & content storytelling","SEO, GEO & AEO visibility","CRM, loyalty & database growth","Influencer & creator programmes","AI-enabled ROI measurement"],
+        svc: {"h1": "Marketing & Brand for Luxury Hotels, Resorts and Marinas", "p1": "Brand positioning, launches and integrated campaigns for hotel groups, island resorts and premium marinas – from concept and content to SEO, GEO and AEO visibility and CRM.", "l": ["Brand positioning and concept development for new and repositioned assets", "Launch and repositioning campaigns", "Integrated marketing across paid, owned, earned and social channels", "Video, content and destination storytelling", "SEO, GEO and AEO search visibility", "CRM, loyalty and database growth"], "a": ["See the angle others miss, picture the finished project, then work back to the plan that makes it real.", "Campaigns across markets and cultures connect each asset's USPs and guest experience to demand.", "AI-enabled ROI dashboards report performance clearly across every channel."]},
+        pdf: "Euan_Blake_Profile_Marketing.pdf",
         results: [
           "RAAYA by Atmosphere: launch outperformed opening occupancy forecasts",
           "JA Manafaru 'The Real Maldives': occupancy from the low 20s% to the mid 40s%",
@@ -1861,6 +1874,8 @@
         p1: "Euan Blake led the naming, branding, marketing and PR of Sekisui House's The Orchards in Sydney (AUD 3m billing in year one), won the GBP 300k launch of Land Securities' Trinity Leeds, and completed brand audits for Kennedy Wilson's Britannia Portfolio and Henderson Global Investors' Whitefriars, Canterbury.",
         p2: "Seven years with JLL and D-Marin's 14-marina repositioning for its private-equity owners give him the investor lens: marketing KPIs aligned with asset value, leasing and community engagement – supported by SEO, GEO and AEO visibility and AI-enabled measurement.",
         cc: ["Naming, branding & positioning","Launch marketing for developments","Brand audits & repositioning","Retail leasing collateral","Community engagement & planning","Investor-aligned marketing KPIs","Video & content production","SEO, GEO & AEO visibility"],
+        svc: {"h1": "Marketing & Brand Strategy for Real Estate and Developments", "p1": "Naming, branding and launch marketing for shopping centres, masterplanned communities, residential and mixed-use schemes.", "l": ["Naming, brand identity and positioning", "Launch marketing and sales campaigns", "Brand audits and repositioning", "Retail leasing collateral and agent materials", "Community engagement and planning communications", "Video and content production"], "a": ["See the angle others miss, picture the finished place, then work back to the brand and launch plan.", "Marketing KPIs are aligned with asset value, leasing and investor objectives.", "SEO, GEO and AEO visibility and AI-enabled measurement keep every campaign accountable."]},
+        pdf: "Euan_Blake_Profile_Marketing_Real_Estate.pdf",
         results: [
           "Sekisui House's The Orchards, Sydney: naming, branding, marketing and PR – AUD 3m billing in year one",
           "Won the GBP 300k launch of Land Securities' Trinity Leeds",
@@ -1910,6 +1925,12 @@
       v.cc.forEach((t, i) => set(`[data-i18n="cc${i + 1}"]`, t));
       const res = document.getElementById("vResults");
       if (res) res.innerHTML = v.results.map(r => `<li>${r}</li>`).join("");
+      if (v.svc) {
+        set('[data-i18n="servicesH1"]', v.svc.h1);
+        set('[data-i18n="servicesP1"]', v.svc.p1);
+        v.svc.l.forEach((t, i) => set(`[data-i18n="servicesL${i + 1}"]`, t));
+        v.svc.a.forEach((t, i) => set(`[data-i18n="approachP${i + 1}"]`, t));
+      }
     }
     (function fillDigital() {
       const d = document.getElementById("vDigital");
