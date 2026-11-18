@@ -1892,7 +1892,16 @@
       const v = VARIANTS[key];
       const set = (sel, txt) => { const el = document.querySelector(sel); if (el) el.textContent = txt; };
       document.title = v.title;
-      set('[data-i18n="lede"]', v.lede);
+      const ledeEl = document.querySelector('[data-i18n="lede"]');
+      if (ledeEl) {
+        const parts = v.lede.split(" · ");
+        const places = parts.length > 1 ? parts.pop() : "";
+        ledeEl.textContent = parts.join(" · ");
+        if (places) {
+          ledeEl.appendChild(document.createElement("br"));
+          ledeEl.appendChild(document.createTextNode(places));
+        }
+      }
       set('[data-i18n="heroHeadline"]', v.headline);
       set('[data-i18n="heroSub"]', v.sub);
       set('[data-i18n="aboutTitle"]', v.aboutTitle);
